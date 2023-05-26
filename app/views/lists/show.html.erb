@@ -1,0 +1,29 @@
+<div class="container">
+
+<h1>Show</h1>
+
+
+
+<%= link_to "add a movie", new_list_bookmark_path(@list) %>
+
+<div class="cards">
+
+
+<% @list.bookmarks.each do |bookm| %>
+
+<div class="card-trip">
+  <%= image_tag bookm.movie.poster_url %>
+
+   <div class="card-trip-infos">
+     <div>
+       <h2><%= bookm.movie.title %></h2>
+       <p><%= bookm.movie.overview %></p>
+     </div>
+     <h2 class="card-trip-pricing">£99.99</h2>
+     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+   </div>
+ </div>
+
+<% end %>
+  </div>
+</div>
